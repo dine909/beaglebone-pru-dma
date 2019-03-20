@@ -278,6 +278,9 @@ index 000000000000..1ac3b935e2a3
 +		goto err_pruss_mem;
 +	}
 +
++ pruss_rproc_get(pru_dma->pruss, PRUSS_PRU0);
++ pruss_rproc_get(pru_dma->pruss, PRUSS_PRU1);
++
 +	pru_dma->irq_from_pru = platform_get_irq_byname(pdev, "irq_from_pru");
 +	if (pru_dma->irq_from_pru < 0)
 +		return pru_dma->irq_from_pru;
